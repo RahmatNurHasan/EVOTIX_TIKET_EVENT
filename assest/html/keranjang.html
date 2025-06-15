@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b67e368fa6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="../img/evotix.png" alt="Evotix">
+        <ul>
+            <li><a href="#">Daftar MENU EVENT</a></li>
+        </ul>
+    </div>
+<div class="main">
+  <!-- ✅ DAFTAR EVENT -->
+  <div class="content" id="eventList">
+    <!-- Kartu-kartu event akan di-generate dari JavaScript -->
+  </div>
+
+  <!-- ✅ KERANJANG TIKET -->
+  <div class="sidebar" id="cartList" style="display:none;">
+    <!-- Bagian total harga -->
+    <div class="total">
+      <h1>Total: Rp. 0</h1>
+      <hr>
+    </div>
+
+    <!-- Daftar kartu event yang dipesan -->
+    <!-- Contoh struktur akan diisi otomatis via JS -->
+    <!--
+    <div class="card-order">
+      <div class="detail">
+        <img src="assets/images/event1.jpg" alt="">
+        <p>Festival Musik Nusantara</p>
+        <span>2</span>
+      </div>
+      <button><i class="fas fa-trash"></i> Hapus</button>
+    </div>
+    -->
+
+    <!-- Tombol selesai order -->
+    <div class="card-finish">
+      <button onclick="orderEvent()">PESAN SEKARANG</button>
+    </div>
+  </div>
+</div>
+  <div style="text-align: center; margin-bottom: 20px;">
+    <a href="beranda.html" class="btn btn-primary btn-lg">Kembalikan ke Beranda</a>
+  </div>
+  
+    <script src="../js/script.js"></script>
+</body>
+</html>
