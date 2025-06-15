@@ -195,6 +195,49 @@
     </ul>
   </div>
 </div>
+<button id="btnCetak" class="cetakan btn btn-secondary btn-lg mt-2 d-none" type="button" onclick="window.print()">Cetak Bukti Pemesanan</button>
+<script>
+  // Validasi Form
+  (function () {
+    'use strict';
+    const form = document.querySelector('.needs-validation');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // cegah reload
+      event.stopPropagation();
+
+      if (form.checkValidity()) {
+        // Jika form valid
+        alert("Pembayaran berhasil! Anda sekarang bisa mencetak bukti pemesanan.");
+        document.getElementById('btnCetak').classList.remove('d-none');
+      } else {
+        // Jika tidak valid
+        alert("Mohon lengkapi semua data sebelum melakukan pembayaran.");
+      }
+
+      form.classList.add('was-validated');
+    }, false);
+  })();
+</script>
+<style>
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    .form-section, .form-section * {
+      visibility: visible;
+    }
+    .btn, .navbar, footer, a[href], .input-group {
+      display: none !important;
+    }
+    #btnCetak {
+      display: none !important;
+    }
+  }
+.cetakan {
+    width: 865px;
+}
+</style>
 
     <footer class="mt-5 text-center">
       <small>© 2023 Praktikum 11 - Pengenalan Perancangan Web | Rahmat Nur Hasan - 24.12.3123</small>
